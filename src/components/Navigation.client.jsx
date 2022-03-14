@@ -17,6 +17,9 @@ export default function Navigation({collections}) {
             </Link>
           </li>
         ))}
+        <Link to="/pages/about" className="block p-4 hover:opacity-80">
+          About
+        </Link>
       </ul>
     </nav>
   );

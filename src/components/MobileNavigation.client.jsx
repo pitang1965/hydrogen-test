@@ -48,6 +48,14 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/pages/about"
+                  className="group py-5 text-gray-700 flex items-center justify-between"
+                >
+                  About
+                </Link>
+              </li>
             </ul>
             <MobileCountrySelector />
           </div>
