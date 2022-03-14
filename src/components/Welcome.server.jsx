@@ -46,16 +46,14 @@ function StorefrontInfo() {
   const totalProducts = products && products.length;
   const totalCollections = collections && collections.length;
 
-  const pluralize = (count, noun, suffix = 's') =>
-    `${count} ${noun}${count === 1 ? '' : suffix}`;
   return (
     <div className="bg-white p-12 shadow-xl rounded-xl text-gray-900">
-      <p className="text-md font-medium uppercase mb-4">Connected Storefront</p>
+      <p className="text-md font-medium uppercase mb-4">オンラインストア</p>
       <h2 className="text-2xl font-bold mb-4">{shopName}</h2>
       <p className="text-md">
-        {pluralize(totalProducts, 'Product')}
+        {`${totalProducts}製品`}
         {', '}
-        {pluralize(totalCollections, 'Collection')}
+        {`${totalCollections}コレクション`}
       </p>
       {totalProducts === 0 && totalCollections === 0 && (
         <div className="py-2 px-3 bg-red-100 text-md">
@@ -71,16 +69,6 @@ function StorefrontInfo() {
           to populate sample products and collections.
         </div>
       )}
-      <hr className="my-4" />
-      <a
-        href="https://shopify.dev/custom-storefronts/hydrogen/getting-started/create#step-2-update-information-about-your-shopify-storefront"
-        className="text-md inline-flex items-center text-blue-700 font-medium hover:underline"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Change your storefront access token
-        <ExternalIcon />
-      </a>
     </div>
   );
 }
@@ -115,14 +103,6 @@ function TemplateLinks() {
             Product template
           </Link>
         </li>
-        <li>
-          <Link
-            to="/error-page"
-            className="text-md font-medium text-blue-700 hover:underline"
-          >
-            404 template
-          </Link>
-        </li>
       </ul>
     </div>
   );
@@ -136,22 +116,14 @@ export default function Welcome() {
     <div className="text-gray-900 pt-16 rounded-[40px] my-16 px-4 xl:px-12 bg-gradient-to-b from-white -mx-4 xl:-mx-12">
       <div className="text-center mb-16">
         <h1 className="font-extrabold mb-4 text-5xl md:text-7xl">
-          Hello, Hydrogen
+          Over 40 Web Shop
         </h1>
-        <p className="text-lg mb-8">
-          Welcome to your custom storefront. Let&rsquo;s get building.
-        </p>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 text-gray-700">
-          <DocsButton
-            url="https://shopify.dev/custom-storefronts/hydrogen"
-            label="Browse Hydrogen documentation"
-          />
-          <DocsButton url="/graphql" label="Open the GraphiQL explorer" />
-          <DocsButton
-            url="https://github.com/Shopify/hydrogen-examples"
-            label="Explore Hydrogen examples"
-          />
-        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 m-4 text-gray-700">
+        <DocsButton
+          url="https://over40web.club/"
+          label="Over 40 Web Clubホームページ"
+        />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <Suspense fallback={<BoxFallback />}>
