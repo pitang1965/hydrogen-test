@@ -14,14 +14,14 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     try {
-      // const res = fetch('/api/sendMail', {
-      //   method: 'POST',
-      //   headers: {
-      //     Accept: 'application/json, text/plain, */*',
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(data),
-      // });
+      const res = fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
       console.log('res: ', res);
       reset();
       alert('お問い合わせが送信されました。');
