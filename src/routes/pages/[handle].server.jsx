@@ -14,6 +14,8 @@ export default function Page({params}) {
   }
 
   const page = data.pageByHandle;
+  // eslint-disable-next-line no-console
+  console.log('page', page);
 
   return (
     <Layout>

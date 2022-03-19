@@ -20,6 +20,9 @@ export default function Navigation({collections}) {
         <Link to="/pages/about" className="block p-4 hover:opacity-80">
           About
         </Link>
+        <Link to="/contact" className="block p-4 hover:opacity-80">
+          お問い合わせ
+        </Link>
       </ul>
     </nav>
   );

@@ -1,0 +1,16 @@
+name = "over-40-web-shop"
+type = "javascript"
+account_id = "18caf44598872231f1b8d86d5d9def8e"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-01-28"
+compatibility_flags = ["streams_enable_constructors"]
+
+[site]
+bucket = "dist/client"
+entry-point = "dist/worker"
+
+[build]
+upload.format = "service-worker"
+command = "yarn && yarn build"

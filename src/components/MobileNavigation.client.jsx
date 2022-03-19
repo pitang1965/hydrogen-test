@@ -56,6 +56,14 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
                   About
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="group py-5 text-gray-700 flex items-center justify-between"
+                >
+                  お問い合わせ
+                </Link>
+              </li>
             </ul>
             <MobileCountrySelector />
           </div>
